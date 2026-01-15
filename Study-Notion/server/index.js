@@ -22,9 +22,16 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors({
-  origin: "*"
-}))
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://learning-management-system-frontend-o6dl.onrender.com"
+    ],
+    credentials: true,
+  })
+)
+
 
 
 
